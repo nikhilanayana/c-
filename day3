@@ -1,0 +1,138 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class Employee
+{
+  public:
+  int id;
+  char name[12];
+  float salary;
+
+  void insert(int i , char n[], float s)
+  {
+    id = i;
+    strcpy(name,n);
+    salary = s;
+  }
+  void display()
+  {
+   cout <<id<<" "<<name<<" "<<salary<<endl;
+  }
+ };
+ int main()
+ {
+  clrscr();
+  Employee e1;
+  e1.insert(12,"Varsha",5373.99);
+  e1.display();
+  getch();
+  return 0;
+ }
+
+**********************************************************************************************
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+//VAIABLES ARE PRIVATE AND FUNCTIONS ARE PUBLIC
+class Employee
+{
+  private:
+  int id;
+  char name[12];
+  float salary;
+
+  public:
+  void insert(int i , char n[], float s)
+  {
+    id = i;
+    strcpy(name,n);
+    salary = s;
+  }
+  public:
+  void display()
+  {
+   cout <<id<<" "<<name<<" "<<salary<<endl;
+  }
+ };
+ int main()
+ {
+  clrscr();
+  Employee e1;
+  e1.insert(12,"Varsha",5373.99);
+  e1.display();
+  getch();
+  return 0;
+ }
+ **********************************************************************************************************************
+ #include<iostream.h>
+#include<conio.h>
+#include<string.h>
+
+class Employee
+{
+  public:
+  int id;
+  char name[12];
+  float salary;
+  float tax;
+
+  Employee()
+  {
+   cout<<"Non-parameterized consturctor"<<endl;
+   id = 1001;
+   strcpy(name, "Varsha");
+   salary = 73663.736563;
+  }
+
+  Employee(int i , char j[], float k)
+  {
+   cout<<"Parameterized constructor"<<endl;
+   id = i;
+   strcpy(name,j);
+   salary = k;
+  }
+  //User-defined Function
+  caltax()
+  {
+    tax = salary*0.2;
+    cout<<"Tax Amount: "<<tax<<endl;
+  }
+  //User-defined Function
+  netsalary()
+  {
+   cout << "Net Salary:"<<salary-tax<<endl;
+  }
+  //USER-DEFINED FUNCTION
+  display()
+  {
+   cout<<"ID:"<<id<<" NAME:"<<name<<" SALARY:"<<salary<<endl;
+  }
+};
+int main()
+{
+ clrscr();
+ Employee e1;
+ Employee e2 = Employee(12,"Varsha",635.73) ;
+ //clrscr();
+ e1.display();
+ e2.display();
+ e1.caltax();
+ e1.netsalary();
+ e2.caltax();
+ e2.netsalary();
+ getch();
+ return 0;
+}
+*********************************************************************************************************
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
